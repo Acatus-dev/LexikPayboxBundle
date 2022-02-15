@@ -1,5 +1,5 @@
 {
-    "name": "Acatus-dev/paybox-bundle",
+    "name": "acatus-dev/paybox-bundle",
     "type": "symfony-bundle",
     "description": "Fork of LexikPayboxBundle to be use in Symfony 5",
     "keywords": ["Symfony5", "bundle", "Paybox", "Payment"],
