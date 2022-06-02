@@ -2,7 +2,7 @@
 
 namespace Lexik\Bundle\PayboxBundle\Event;
 
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 
 /**
  * PayboxResponseEvent class.
@@ -17,15 +17,14 @@ class PayboxResponseEvent extends Event
     private $data;
 
     /**
-     * @var boolean
+     * @var bool
      */
     private $verified;
 
     /**
      * Constructor.
      *
-     * @param array   $data
-     * @param boolean $verified
+     * @param bool $verified
      */
     public function __construct(array $data, $verified = false)
     {
@@ -46,7 +45,7 @@ class PayboxResponseEvent extends Event
     /**
      * Returns true if signature verification was successful.
      *
-     * @return boolean
+     * @return bool
      */
     public function isVerified()
     {
