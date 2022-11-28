@@ -5,6 +5,15 @@ parameters:
     lexik_paybox.direc_plus.request_handler:         'Lexik\Bundle\PayboxBundle\Paybox\DirectPlus\Request'
 
 services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+    
+    Lexik\Bundle\PayboxBundle\Controller\:
+        resource: '../../Controller'
+        calls:
+            - setContainer: ['@service_container']
+        tags: ['controller.service_arguments']
     lexik_paybox.request_handler:
         class:     '%lexik_paybox.request_handler.class%'
         public:    true
